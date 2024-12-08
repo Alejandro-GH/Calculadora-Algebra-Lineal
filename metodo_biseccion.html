@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+    <title>Método de Bisección</title>
+</head>
+<body>
+    <h1>Método de Bisección</h1>
+    <form method="post">
+        <label for="funcion">Función:</label><br>
+        <input type="text" id="funcion" name="funcion"><br>
+        <label for="a">a:</label><br>
+        <input type="text" id="a" name="a"><br>
+        <label for="b">b:</label><br>
+        <input type="text" id="b" name="b"><br>
+        <label for="iteraciones">Iteraciones:</label><br>
+        <input type="text" id="iteraciones" name="iteraciones"><br>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if resultado %}
+        <h2>Proceso:</h2>
+        <ul>
+            {% for paso in resultado %}
+                <li>{{ paso }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

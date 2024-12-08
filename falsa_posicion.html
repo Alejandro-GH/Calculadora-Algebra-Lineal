@@ -1,0 +1,31 @@
+<!doctype html>
+<html>
+<head>
+    <title>Método de Falsa Posición</title>
+</head>
+<body>
+    <h1>Método de Falsa Posición</h1>
+    <form method="post">
+        <label for="funcion">Función f(x):</label><br>
+        <input type="text" id="funcion" name="funcion"><br>
+        <label for="a">a (Extremo Izquierdo):</label><br>
+        <input type="text" id="a" name="a"><br>
+        <label for="b">b (Extremo Derecho):</label><br>
+        <input type="text" id="b" name="b"><br>
+        <label for="tolerancia">Tolerancia:</label><br>
+        <input type="text" id="tolerancia" name="tolerancia" value="0.0001"><br>
+        <label for="iteraciones">Iteraciones:</label><br>
+        <input type="text" id="iteraciones" name="iteraciones" value="100"><br>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if resultado %}
+        <h2>Raíz: {{ resultado }}</h2>
+        <h3>Pasos:</h3>
+        <ul>
+            {% for paso in pasos %}
+                <li>{{ paso }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>

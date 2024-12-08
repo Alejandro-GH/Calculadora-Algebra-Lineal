@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Multiplicación de Matrices</title>
+</head>
+<body>
+    <h1>Multiplicación de Matrices</h1>
+    <form method="post">
+        <label for="matriz_a">Matriz A (filas separadas por ';', elementos por ','):</label><br>
+        <textarea id="matriz_a" name="matriz_a" rows="4" cols="50"></textarea><br>
+        <label for="matriz_b">Matriz B (filas separadas por ';', elementos por ','):</label><br>
+        <textarea id="matriz_b" name="matriz_b" rows="4" cols="50"></textarea><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Matriz A:</h2>
+        <pre>{{ matriz_a }}</pre>
+        <h2>Matriz B:</h2>
+        <pre>{{ matriz_b }}</pre>
+        <h2>Resultado de A * B:</h2>
+        <pre>{{ resultado }}</pre>
+    {% endif %}
+</body>
+</html>

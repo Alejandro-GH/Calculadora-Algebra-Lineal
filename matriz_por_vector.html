@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Multiplicación de Matriz por Vector</title>
+</head>
+<body>
+    <h1>Multiplicación de Matriz por Vector</h1>
+    <form method="post">
+        <label for="matriz">Matriz (use ';' para separar filas y ',' para separar elementos):</label><br>
+        <textarea id="matriz" name="matriz" rows="4" cols="50"></textarea><br>
+        <label for="vector">Vector (use ',' para separar elementos):</label><br>
+        <input type="text" id="vector" name="vector"><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <pre>{{ resultado }}</pre>
+    {% endif %}
+</body>
+</html>

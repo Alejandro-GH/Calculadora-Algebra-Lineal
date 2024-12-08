@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head>
+    <title>Método de Gauss-Jordan</title>
+</head>
+<body>
+    <h1>Método de Gauss-Jordan</h1>
+    <form method="post">
+        <label for="matriz">Matriz Aumentada (filas separadas por ';', elementos por ','):</label><br>
+        <input type="text" id="matriz" name="matriz"><br>
+        <button type="submit">Calcular</button>
+    </form>
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <pre>{{ resultado }}</pre>
+    {% endif %}
+</body>
+</html>

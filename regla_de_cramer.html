@@ -1,0 +1,21 @@
+<!doctype html>
+<html>
+<head>
+    <title>Regla de Cramer</title>
+</head>
+<body>
+    <h1>Regla de Cramer</h1>
+    <form method="post">
+        <label for="matriz">Matriz (filas separadas por ';', elementos por ','):</label><br>
+        <textarea id="matriz" name="matriz" rows="4" cols="50"></textarea><br>
+        <label for="vector">Vector (elementos separados por ','):</label><br>
+        <input type="text" id="vector" name="vector"><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <pre>{{ resultado }}</pre>
+    {% endif %}
+</body>
+</html>

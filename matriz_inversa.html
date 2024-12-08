@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+<head>
+    <title>Calculadora de Inversa de Matrices</title>
+</head>
+<body>
+    <h1>Calculadora de Inversa de Matrices</h1>
+    <form method="post">
+        <label for="tamano">Tamaño de la matriz (n x n):</label><br>
+        <input type="text" id="tamano" name="tamano"><br>
+        <button type="submit">Generar Matriz</button>
+    </form>
+
+    <form method="post">
+        {% if matriz %}
+            {% for fila in matriz %}
+                <div>
+                    {% for valor in fila %}
+                        <input type="text" name="matriz" value="{{ valor }}" style="width: 40px;">
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <button type="submit">Calcular Inversa</button>
+        {% endif %}
+    </form>
+
+    {% if inversa %}
+        <h2>Matriz Inversa:</h2>
+        <pre>{{ inversa }}</pre>
+    {% endif %}
+</body>
+</html>

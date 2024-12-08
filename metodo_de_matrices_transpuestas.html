@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+<head>
+    <title>Calculadora de Matriz Transpuesta</title>
+</head>
+<body>
+    <h1>Calculadora de Matriz Transpuesta</h1>
+    <form method="post">
+        <label for="matriz">Matriz (filas separadas por ';', elementos por ','):</label><br>
+        <input type="text" id="matriz" name="matriz"><br>
+        <button type="submit">Calcular Transpuesta</button>
+    </form>
+    {% if resultado %}
+        <h2>Matriz Original:</h2>
+        <pre>{{ original }}</pre>
+        <h2>Matriz Transpuesta:</h2>
+        <pre>{{ resultado }}</pre>
+    {% endif %}
+</body>
+</html>

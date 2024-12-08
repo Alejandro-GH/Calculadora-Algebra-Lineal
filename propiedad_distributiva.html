@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+<head>
+    <title>Propiedad Distributiva</title>
+</head>
+<body>
+    <h1>Propiedad Distributiva</h1>
+    <form method="post">
+        <label for="matriz_a">Matriz A (filas separadas por ';', elementos por ','):</label><br>
+        <textarea id="matriz" name="matriz" rows="4" cols="50"></textarea><br>
+        <label for="vector_u">Vector u (elementos separados por ','):</label><br>
+        <input type="text" id="vector_u" name="vector_u"><br>
+        <label for="vector_v">Vector v (elementos separados por ','):</label><br>
+        <input type="text" id="vector_v" name="vector_v"><br>
+        <button type="submit">Calcular</button>
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado:</h2>
+        <pre>{{ resultado }}</pre>
+    {% endif %}
+</body>
+</html>

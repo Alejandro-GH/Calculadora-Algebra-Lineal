@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+<head>
+    <title>Calculadora de Determinantes</title>
+</head>
+<body>
+    <h1>Calculadora de Determinantes</h1>
+    <form method="post">
+        <label for="tamano">Tamaño de la matriz (n x n):</label><br>
+        <input type="text" id="tamano" name="tamano"><br>
+        <button type="submit">Generar Matriz</button>
+    </form>
+
+    <form method="post">
+        {% if matriz %}
+            {% for fila in matriz %}
+                <div>
+                    {% for valor in fila %}
+                        <input type="text" name="matriz" value="{{ valor }}" style="width: 40px;">
+                    {% endfor %}
+                </div>
+            {% endfor %}
+            <button type="submit">Calcular Determinante</button>
+        {% endif %}
+    </form>
+
+    {% if resultado %}
+        <h2>Resultado: Determinante = {{ resultado }}</h2>
+        <h3>Propiedades:</h3>
+        <ul>
+            {% for propiedad in propiedades %}
+                <li>{{ propiedad }}</li>
+            {% endfor %}
+        </ul>
+    {% endif %}
+</body>
+</html>
